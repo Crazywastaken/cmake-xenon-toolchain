@@ -8,4 +8,4 @@ include(cmake/config.cmake)
 include(cmake/compiler.cmake)
 
 # add sample shared library
-add_xenon_module(sample "sample/dllmain.cpp")
+add_xenon_module(sample "sample/sample.xml" "sample/dllmain.cpp")

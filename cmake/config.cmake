@@ -9,7 +9,7 @@ elseif (${CMAKE_SYSTEM_NAME} STREQUAL "Xenon")
     set(PLATFORM_XENON 1)
     set(PLATFORM_NAME "xenon")
     include("cmake/scripts/xenon-utils.cmake")
-    include("CMake/toolchain/xenon-toolchain.cmake")
+    include("cmake/toolchain/xenon-toolchain.cmake")
 endif()
 
 if(${CMAKE_SIZEOF_VOID_P} EQUAL 8)
