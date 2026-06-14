@@ -3,15 +3,6 @@
 
 XDK_CL="$XEDK/bin/win32/cl.exe"
 
-# NEW: Define the Windows-style paths to the XDK include directories.
-# These match where the XDK headers live inside your Wine environment.
-XDK_INC_1="$XEDK\\include\\xbox"
-# If your XDK has a standard CRT include folder, add it here separated by a semicolon:
-# XDK_INC_2="Z:\\hdd\\Program Files (x86)\\Microslop Xbox 360 SDK\\include\\crt"
-
-# Export the INCLUDE variable so cl.exe automatically finds stdlib.h, string.h, etc.
-export INCLUDE="${XDK_INC_1}"
-
 ARGS=()
 for arg in "$@"; do
     # 1. Ignore entirely empty arguments safely
