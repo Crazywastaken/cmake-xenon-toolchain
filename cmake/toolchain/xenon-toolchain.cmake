@@ -16,7 +16,7 @@ if(NOT XENON_XDK_COMPILER_DIR)
     message(FATAL_ERROR "Unable to find Xbox 360 XDK compiler tools.")
 endif()
 
-set(CMAKE_SYSTEM_NAME Xbox360)
+set(CMAKE_SYSTEM_NAME Xenon)
 set(CMAKE_CROSSCOMPILING ON)
 set(XENON true)
 
