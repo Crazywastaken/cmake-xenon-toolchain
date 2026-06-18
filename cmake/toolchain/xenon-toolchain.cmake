@@ -71,16 +71,16 @@ set(CMAKE_SHARED_LIBRARY_C_FLAGS "" CACHE STRING "" FORCE)
 set(CMAKE_SHARED_LIBRARY_CXX_FLAGS "" CACHE STRING "" FORCE)
 
 # Use the Xbox 360 XDK compilers
-if(WIN32)
-set(CMAKE_C_COMPILER "${CMAKE_CURRENT_LIST_DIR}/../scripts/cl-wrapper.sh")
-set(CMAKE_CXX_COMPILER "${CMAKE_CURRENT_LIST_DIR}/../scripts/cl-wrapper.sh")
-set(CMAKE_ASM_COMPILER "${XENON_XDK_COMPILER_DIR}/ml.exe")
-set(CMAKE_LINKER "${CMAKE_CURRENT_LIST_DIR}/../scripts/link-wrapper.sh")
-else()
+if(CMAKE_HOST_WIN32)
 set(CMAKE_C_COMPILER "${XENON_XDK_COMPILER_DIR}/cl.exe")
 set(CMAKE_CXX_COMPILER "${XENON_XDK_COMPILER_DIR}/cl.exe")
 set(CMAKE_ASM_COMPILER "${XENON_XDK_COMPILER_DIR}/ml.exe")
 set(CMAKE_LINKER "${XENON_XDK_COMPILER_DIR}/link.exe")
+else()
+set(CMAKE_C_COMPILER "${CMAKE_CURRENT_LIST_DIR}/../scripts/cl-wrapper.sh")
+set(CMAKE_CXX_COMPILER "${CMAKE_CURRENT_LIST_DIR}/../scripts/cl-wrapper.sh")
+set(CMAKE_ASM_COMPILER "${XENON_XDK_COMPILER_DIR}/ml.exe")
+set(CMAKE_LINKER "${CMAKE_CURRENT_LIST_DIR}/../scripts/link-wrapper.sh")
 endif()
 
 # Skip compiler detection info
